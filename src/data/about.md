@@ -1,7 +1,7 @@
 ---
 title: about
 background_color: '#AEC4BE'
-photo: ../static/personal_photo.png
+photo: ../static/1820160.png
 ---
 
 ## Designer, Engineer and Maker from London
