@@ -4,3 +4,5 @@ src/.next
 src/out/
 .next/
 .DS_Store
+
+.now
