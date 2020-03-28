@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header(props) {
   return (
-    <header>
+    <header className="Header" width="viewport">
       <Link href="/"><a>G</a></Link>
 
       <nav>
