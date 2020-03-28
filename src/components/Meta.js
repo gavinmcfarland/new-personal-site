@@ -43,6 +43,8 @@ export default function Meta(props) {
                 }
 
                 body {
+                    padding: 0;
+                    margin: 0;
                     min-height: 100%;
                     
                 }
