@@ -1,6 +1,7 @@
 import * as React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useLocalMarkdownForm } from 'next-tinacms-markdown'
 
 import { useForm, Wysiwyg } from 'tinacms'
@@ -12,6 +13,14 @@ import {
 } from 'react-tinacms-inline'
 
 import Layout from '../../components/Layout'
+
+function WithCodeStyles({ language, value }) {
+	return (
+		<SyntaxHighlighter language={language} useInlineStyles={false}>
+			{value}
+		</SyntaxHighlighter>
+	)
+}
 
 function EditToggle() {
 	const { status, activate, deactivate } = useInlineForm()
@@ -39,7 +48,7 @@ export function SaveButton() {
 			}}
 		>
 			Save
-	  </button>
+		</button>
 	)
 }
 
@@ -54,7 +63,7 @@ function ResetButton() {
 			}}
 		>
 			Reset
-	  </button>
+		</button>
 	)
 }
 
@@ -159,7 +168,7 @@ export default function BlogTemplate(props) {
 								if (status === 'active') {
 									return <Wysiwyg input={input} />
 								}
-								return <ReactMarkdown source={input.value} />
+								return <ReactMarkdown source={input.value} renderers={{ code: WithCodeStyles }} />
 							}
 						}
 					</InlineField>

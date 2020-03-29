@@ -16,7 +16,7 @@ The main downside is if you happen to use the `::before` and `::after` pseudo-el
 
 A way around this is to only to apply leading trim to the top of the text (the most noticeable in my opinion) so you can still use the `::after` pseudo-element for the bullet. In some instances however, it will be more noticeable that the text is closer to the top than it is to the bottom. You can, of course, avoid using a pseudo-element to style the bullet and instead rely on CSS using display: list-item to style bullets but it doesn't provide as much level of control.
 
-## When to Apply it
+###### When to Apply it
 
 Something to think about is when you will use this technique. Do you use it for one-off cases? Perhaps for aligning text to an icon. Or perhaps to achieve consistent padding around a button. One recent idea by Mark Dalgleish has been that "Components shouldn't contain surrounding white space". You could, therefore, apply this to most if not all elements (barring a few block elements where pseudo-element interfere with the layout). I'd like to see more experimentation with how this affects vertical rhythm. Line-height is one of the core components of setting a vertical rhythm. If the line-height is being cropped, how does this impact the vertical alignment when sat alongside and above and below other text? Perhaps it's not something we need to worry about, or maybe it is?
 

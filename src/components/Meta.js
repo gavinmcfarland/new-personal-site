@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import hljs from 'highlight.js';
 
 export default function Meta(props) {
     return (
@@ -8,6 +9,9 @@ export default function Meta(props) {
                 <meta charSet="utf-8" />
                 <title>{props.siteTitle}</title>
                 <meta name="Description" content={props.description}></meta>
+                <link rel="stylesheet"
+                    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css" />
+                <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" />
             </Head>
             <style jsx global>
                 {`

@@ -1,4 +1,5 @@
 @import 'typolize';
+@import url("https://unpkg.com/typolize/dist/typolize/theme/default.css");
 
 :root {
 	--line-ratio: 1.5;
@@ -11,4 +12,12 @@
 	--font-size-h4: var(--font-size-2);
 	--font-size-h5: var(--font-size-1);
 	--font-size-h6: var(--font-size-0);
+}
+
+* {
+	--leading-trim: initial !important;
+}
+
+ul, ol {
+	list-style: none;
 }
