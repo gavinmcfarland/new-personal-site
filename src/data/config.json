@@ -1,7 +1,7 @@
 {
   "fileRelativePath": "src/data/config.json",
-  "title": "Gavin McFarland",
-  "description": "Personal blog and portfolio of Gavin McFarland.",
-  "repositoryUrl": "https://github.com/limitlessloop/new-personal-site.git",
+  "title": "Modern Nomad",
+  "description": "Starter blog using Tina CMS with Next.js.",
+  "repositoryUrl": "https://github.com/kendallstrautman/brevifolia-next-tinacms",
   "intro": "Test Product Designer Interested in Automated Design Systems and Design Tooling"
 }

@@ -1,0 +1,14 @@
+@import 'typolize';
+
+:root {
+	--line-ratio: 1.5;
+	--font-ratio: 1.333;
+
+	--font-size-body: var(--font-size-0);
+	--font-size-h1: var(--font-size-5);
+	--font-size-h2: var(--font-size-4);
+	--font-size-h3: var(--font-size-3);
+	--font-size-h4: var(--font-size-2);
+	--font-size-h5: var(--font-size-1);
+	--font-size-h6: var(--font-size-0);
+}

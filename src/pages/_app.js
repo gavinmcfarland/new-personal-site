@@ -1,6 +1,7 @@
 import React from 'react'
 import App from 'next/app'
-import { Tina, TinaCMS } from 'tinacms'
+import '../styles/styles.css'
+import { TinaProvider, Tina, TinaCMS } from 'tinacms'
 import { GitClient, GitMediaStore } from '@tinacms/git-client'
 
 class MyApp extends App {
@@ -25,4 +26,5 @@ class MyApp extends App {
     )
   }
 }
+
 export default MyApp

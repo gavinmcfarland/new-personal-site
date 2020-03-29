@@ -21,7 +21,8 @@ export default function Meta(props) {
 
                     /* Centers the element */
                     position: relative;
-                    left: 50%;
+                    /*left: 50%; */
+                    margin-left: 50%;
                     transform: translate(-50vw);
                     /* Inherits any padding set on parent */
                     padding-left: inherit;
@@ -49,6 +50,17 @@ export default function Meta(props) {
                     
                 }
                 .Header {
+                    position: sticky;
+                    top: 0;
+                }
+
+                .Header {
+                    flex-direction: row;
+                    display: flex;
+                }
+
+                .Header *:nth-child(1) {
+                    flex-grow: 1;
                 }
                 .App {
                     display: flex;
@@ -74,8 +86,8 @@ export default function Meta(props) {
                     box-sizing: content-box;
                     
                     /* Centers the site */
-                    margin-left: auto;
-	                margin-right: auto;
+                    {/* margin-left: auto; */}
+	                {/* margin-right: auto; */}
                 }
         `}
             </style>
