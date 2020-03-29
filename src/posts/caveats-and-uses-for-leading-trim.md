@@ -8,7 +8,7 @@ The W3C working group have a draft proposal for a leading-trim property which al
 
 ## The Workaround
 
-For a w hile,   the re has existed a workaround created by Kevin Powel. It has sometimes been called text cropping, or line-height cropping. It works by applying `::before` and `::after` pseudo-elements and applying a negative margin to pull surrounding space in towards the text, therefore removing the white space. Recently I've been exploring this workaround, what you can do with it, and if there are other ways to achieve the same result without having to use pseudo-elements. I want to share what I've learned. I won't go into the specifics about how the technique works as there are several ways to achieve this, including my own. However, I will link to the great resources regarding these different methods below.
+For a while,   there has existed a workaround created by Kevin Powel. It has sometimes been called text cropping, or line-height cropping. It works by applying `::before` and `::after` pseudo-elements and applying a negative margin to pull surrounding space in towards the text, therefore removing the white space. Recently I've been exploring this workaround, what you can do with it, and if there are other ways to achieve the same result without having to use pseudo-elements. I want to share what I've learned. I won't go into the specifics about how the technique works as there are several ways to achieve this, including my own. However, I will link to the great resources regarding these different methods below.
 
 ## Applying to the Top Only
 
