@@ -20,8 +20,6 @@ export default function Layout(props) {
           <Link href="#"><a>LinkedIn</a></Link>
         </footer>
       </div>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script>
     </>
   );
 }

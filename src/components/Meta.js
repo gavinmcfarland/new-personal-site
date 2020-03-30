@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import hljs from 'highlight.js';
 
 export default function Meta(props) {
     return (
@@ -13,6 +12,7 @@ export default function Meta(props) {
                     href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css" />
                 <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" />
             </Head>
+
             <style jsx global>
                 {`
                 /* Fullwidth */
@@ -42,6 +42,8 @@ export default function Meta(props) {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
+                    padding-left: var(--rem-2);
+                    padding-right: var(--rem-2);
                 }
                 html {
                     height: 100%;
@@ -61,6 +63,9 @@ export default function Meta(props) {
                 .Header {
                     flex-direction: row;
                     display: flex;
+                    padding-top: var(--rem-1);
+                    padding-bottom: var(--rem-1);
+
                 }
 
                 .Header *:nth-child(1) {
@@ -83,15 +88,21 @@ export default function Meta(props) {
                 /* Styling */
                 .Header {
                     border-bottom: 1px solid;
+                    padding-left: inherit;
+                    padding-right: inherit;
                 }
 
                 .App {
-                    max-width: 1400px;
+                    max-width: 1200px;
                     box-sizing: content-box;
                     
                     /* Centers the site */
-                    {/* margin-left: auto; */}
-	                {/* margin-right: auto; */}
+                    /* margin-left: auto; */
+	                /* margin-right: auto; */
+
+                    /* Passed nesting into children elements */
+                    padding-left: inherit;
+                    padding-right: inherit;
                 }
         `}
             </style>

@@ -1,14 +1,15 @@
 import Link from "next/link";
+import Tabs from "./Tabs";
 
 export default function Header(props) {
   return (
     <header className="Header" width="viewport">
       <Link href="/"><a>G</a></Link>
 
-      <nav>
+      <Tabs>
         <Link href="/thoughts"><a>Thoughts</a></Link>
         <Link href="/about"><a>About</a></Link>
-      </nav>
+      </Tabs>
     </header>
   );
 }
