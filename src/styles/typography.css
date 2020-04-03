@@ -1,0 +1,123 @@
+/* Reset */
+button {
+	-webkit-appearance: none;
+	border: none;
+	background: unset;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	letter-spacing: inherit;
+}
+
+/* Font styling */
+
+:root {
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	--font-base: 20px;
+	--cap-height: 0.75;
+	--tab-size: 2;
+	--letter-spacing-body: -0.03em;
+	--letter-spacing-heading: -0.06em;
+	--font-family-body: 'Inter', sans-serif;
+	/* --font-family-heading: "Helvetica Neue", sans-serif; */
+	--font-family-code: "Fira Code", monospace;
+	--font-weight-heading: bold;
+	--font-ratio: 1.333;
+	--spacing-ratio: 1;
+	--line-ratio: 1.333;
+}
+
+/* Font Sizes */
+
+:root {
+	--font-size-body: var(--font-size-0);
+	--font-size-h1: var(--font-size-5);
+	--font-size-h2: var(--font-size-1);
+	--font-size-h3: var(--font-size-0);
+	--font-size-h4: var(--font-size-1);
+	--font-size-h5: var(--font-size-1);
+	--font-size-h6: var(--font-size-0);
+	--font-size-blockquote: var(--font-size-body);
+	--font-size-small: var(--font-size--1);
+}
+
+
+/* Spacing Rules */
+
+* {
+	--margin-top: var(--em-0);
+	--margin-bottom: var(--em-0);
+}
+
+body {
+	color: black;
+}
+
+a {
+	color: inherit;
+}
+
+p a, ul a {
+	border-bottom: 1px solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	--margin-top: var(--em-2);
+	color: black;
+}
+
+h1 {
+	--margin-bottom: var(--em-1);
+	max-width: 25ch;
+}
+
+code {
+	font-weight: normal;
+	font-size: 0.75em;
+	line-height: 1.5;
+	font-variant-ligatures: no-contextual;
+}
+
+p code, dl code, ul code, li code, pre {
+	background-color: #F0EDF7;
+	color: #333;
+	background: #f8f8f8;
+	border-radius: 2px;
+	letter-spacing: 0;
+	border: 1px solid hsla(269,0%,0%,10%);
+}
+
+p code, dl code, ul code, li code {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+pre {
+	--margin-top: var(--em-2);
+	--margin-bottom: calc(var(--em-2) + 0.2em);
+	padding: var(--rem-0);
+	max-width: 75%;
+}
+
+dl {
+	/* --margin-top: var(--em-1); */
+	/* --margin-bottom: var(--em-1); */
+}
+
+dt {
+	font-weight: bold;
+	--margin-bottom: var(--em--1);
+}
+
+dd {
+	--margin-top: var(--em--1);
+	margin-left: var(--em-1);
+}
+
+button {
+	border: 2px solid;
+	padding: var(--em--1) var(--em-0);
+	border-radius: 999px;
+	min-width: 120px;
+}

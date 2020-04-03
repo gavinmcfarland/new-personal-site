@@ -3,7 +3,7 @@ import Box from './Box'
 
 export default function Tabs(props) {
   return (
-    <Box gapColumn="20px">
+    <Box gapColumn="var(--rem-1)">
       {props.children}
     </Box>
   );

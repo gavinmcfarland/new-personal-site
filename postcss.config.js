@@ -1,6 +1,7 @@
 module.exports = {
     plugins: {
         'postcss-import': {},
+        'postcss-selector-matches': {},
         // 'postcss-for': {},
         // 'postcss-custom-selectors': {},
         // 'postcss-short': {},

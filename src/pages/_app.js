@@ -1,6 +1,6 @@
 import React from 'react'
 import App from 'next/app'
-import '../styles/styles.css'
+import '../styles/index.css'
 import { TinaProvider, Tina, TinaCMS } from 'tinacms'
 import { GitClient, GitMediaStore } from '@tinacms/git-client'
 

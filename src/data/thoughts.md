@@ -1,3 +1,3 @@
 ---
-title: thoughts
+title: Thoughts
 ---

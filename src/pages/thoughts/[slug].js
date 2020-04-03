@@ -1,8 +1,12 @@
 import * as React from 'react'
 import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown/with-html'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useLocalMarkdownForm } from 'next-tinacms-markdown'
+import { Button as TinaButton } from '@tinacms/styles'
+import emoji from 'remark-emoji';
+import deflist from 'remark-deflist';
+import remark2rehype from 'remark-rehype';
 
 import { useForm, Wysiwyg } from 'tinacms'
 import {
@@ -21,6 +25,32 @@ function WithCodeStyles({ language, value }) {
 		</SyntaxHighlighter>
 	)
 }
+
+function DefinitionList(props) {
+	return (
+		<dl>
+			{props.children}
+		</dl>
+	)
+}
+
+function DefinitionTerm(props) {
+	return (
+		<dt>
+			{props.children}
+		</dt>
+	)
+}
+
+function DefinitionDetails(props) {
+	return (
+		<dd>
+			{props.children}
+		</dd>
+	)
+}
+
+
 
 function EditToggle() {
 	const { status, activate, deactivate } = useInlineForm()
@@ -49,6 +79,16 @@ export function SaveButton() {
 		>
 			Save
 		</button>
+	)
+}
+
+export function SaveButtonTwo() {
+	const { form } = useInlineForm()
+
+	return (
+		<TinaButton primary onClick={form.submit}>
+			Save
+		</TinaButton>
 	)
 }
 
@@ -168,7 +208,7 @@ export default function BlogTemplate(props) {
 								if (status === 'active') {
 									return <Wysiwyg input={input} />
 								}
-								return <ReactMarkdown source={input.value} renderers={{ code: WithCodeStyles }} />
+								return <ReactMarkdown source={input.value} renderers={{ code: WithCodeStyles, definitionList: DefinitionList, descriptionlist: DefinitionList, descriptionterm: DefinitionTerm, descriptiondetails: DefinitionDetails }} escapeHtml={false} plugins={[deflist, emoji]} />
 							}
 						}
 					</InlineField>

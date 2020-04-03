@@ -18,17 +18,16 @@ const BlogList = (props) => {
     <>
       <ul>
         {posts.length > 1 && posts.map(post => (
-          <Link
-            key={post.slug}
-            href={{ pathname: `/thoughts/${post.slug}` }} >
-            <a>
-              <li>
-                <h2>{post.document.data.title}</h2>
-                {/* <h3>{reformatDate(post.document.data.date)}</h3> */}
-                {/* <ReactMarkdown source={truncateSummary(post.document.content)} /> */}
-              </li>
-            </a>
-          </Link>
+
+          <li>
+
+            <h2><Link
+              key={post.slug}
+              href={{ pathname: `/thoughts/${post.slug}` }} ><a>{post.document.data.title}</a></Link></h2>
+            {/* <h3>{reformatDate(post.document.data.date)}</h3> */}
+            {/* <ReactMarkdown source={truncateSummary(post.document.content)} /> */}
+          </li>
+
         ))}
       </ul>
     </>

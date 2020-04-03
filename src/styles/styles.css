@@ -1,5 +1,3 @@
-@import 'typolize';
-
 /* Reset */
 
 ul, ol {
@@ -17,36 +15,11 @@ a {
 	--spacing-ratio: 1;
 }
 
-/* Font styling */
 
-:root {
-	--cap-height: 0.75;
-	--tab-size: 2;
-	--letter-spacing-body: -0.03em;
-	--letter-spacing-heading: -0.03em;
-	--font-family-body: "Helvetica Neue", sans-serif;
-	--font-family-heading: "Helvetica Neue", sans-serif;
-	--font-family-code: "Andale Mono", monospace;
-	--font-weight-heading: bold;
-}
-
-/* Typsetting */
-
-:root {
-	--font-size-body: var(--font-size-0);
-	--font-size-h1: var(--font-size-5);
-	--font-size-h2: var(--font-size-1);
-	--font-size-h3: var(--font-size-0);
-	--font-size-h4: var(--font-size-1);
-	--font-size-h5: var(--font-size-1);
-	--font-size-h6: var(--font-size-0);
-	--font-size-blockquote: var(--font-size-body);
-	--font-size-small: var(--font-size--1);
-}
 
 /* Spacing */
 
-*+*:not(nav, section) {
+/* *+*:not(nav, section) {
 	margin-top: var(--em-1);
 }
 
@@ -71,6 +44,34 @@ h1, h2, h3, h4, h5 {
 
 h6 {
 	margin-top: var(--em-3);
+} */
+
+
+html, body, main, section, header, footer, span, div, svg, article {
+	--margin-top: 0;
+	--margin-bottom: 0;
+}
+
+pre > code {
+	--has-bfc: 0;
+}
+
+div:first-child {
+	--margin-top: 0;
+	--margin-bottom: 0;
+}
+
+
+
+* {
+	--margin-actual-top: var(--has-bfc, var(--margin-top, unset));
+	--margin-actual-bottom: var(--has-bfc, var(--margin-bottom, unset));
+	margin-top: var(--margin-actual-top, unset);
+	margin-bottom: var(--margin-actual-bottom, unset);
+	--margin-actual-left: var(--margin-left, unset);
+	--margin-actual-right: var(--margin-right, unset);
+	margin-left: var(--margin-actual-left, unset);
+	margin-right: var(--margin-actual-right, unset);
 }
 
 
@@ -82,15 +83,10 @@ h6 {
 }
   
 :first-child {
-	--margin-actual-top: var(--has-bfc, var(--margin-top));
+	--margin-actual-top: var(--has-bfc, var(--margin-top, unset));
 }
   
-*+* {
-	--margin-actual-top: var(--margin-top);
-	--margin-actual-bottom: var(--margin-bottom);
-	margin-top: var(--margin-actual-top);
-	margin-bottom: var(--margin-actual-bottom);
-}
+
 
 [data-gap-column] > * {
 	--margin-left: var(--gap-column);
@@ -98,12 +94,18 @@ h6 {
 }
   
 :first-child {
-	--margin-actual-left: var(--has-bfc, var(--margin-left));
+	--margin-actual-left: 0;
 }
-  
-*+* {
-	--margin-actual-left: var(--margin-left);
-	--margin-actual-right: var(--margin-right);
-	margin-left: var(--margin-actual-left);
-	margin-right: var(--margin-actual-right);
+
+
+
+
+
+/* Odd Fixes */
+
+.CodeMirror {
+	z-index: 0;
+}
+.CodeMirror * {
+	z-index: 0 !important; /* Appears above header */
 }

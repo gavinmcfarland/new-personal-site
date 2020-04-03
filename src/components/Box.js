@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import styled from 'styled-components'
-import { color, layout, space, system } from 'styled-system'
+import { color, layout, space, system, flexbox } from 'styled-system'
 
 
 class WithGap extends React.Component {
@@ -23,6 +23,7 @@ const Box = styled(WithGap)`
   ${color}
   ${space}
   ${layout}
+  ${flexbox}
 `
 
 export default Box
