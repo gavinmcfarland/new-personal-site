@@ -25,7 +25,7 @@
 		"express": "^4.17.1",
 		"glob": "^7.1.6",
 		"gray-matter": "^4.0.2",
-		"highlight.js": "^9.18.1",
+		"highlight.js": "^10.1.2",
 		"markdown-to-jsx": "^6.11.0",
 		"mdx.macro": "^0.2.9",
 		"moment": "^2.24.0",
